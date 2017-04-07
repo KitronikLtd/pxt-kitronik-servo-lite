@@ -1,3 +1,6 @@
-//% weight=100 color=#0fbc11 icon=""
+/**
+ * Kitronik blocks
+ */
+//% weight=100 color=#00A654 icon=""
 namespace kitronik {
 }
