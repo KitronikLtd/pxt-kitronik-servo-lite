@@ -1,6 +1,6 @@
 {
     "name": "microbit_PXT_Blocks",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Blocks to simplify using Kitronik products in PXT",
     "license": "MIT",
     "dependencies": {
