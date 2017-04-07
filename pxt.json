@@ -4,7 +4,8 @@
     "description": "Blocks to simplify using Kitronik products in PXT",
     "license": "MIT",
     "dependencies": {
-        "core": "*"      },
+        "core": "*"
+    },
     "files": [
         "README.md",
         "main.ts"
