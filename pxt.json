@@ -1,5 +1,5 @@
 {
-    "name": "microbit_PXT_Blocks",
+    "name": "pxt-kitronik",
     "version": "0.0.2",
     "description": "Blocks to simplify using Kitronik products in PXT",
     "license": "MIT",
@@ -8,7 +8,9 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "ns.ts",
+        "motors.ts",
+        "servolite.ts"
     ],
     "testFiles": [
         "tests.ts"

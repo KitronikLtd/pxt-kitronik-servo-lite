@@ -1,13 +1,15 @@
+// go round
 input.onButtonPressed(Button.A, () => {
-Kitronik.MotorOn(Kitronik.eMotors.Motor1, Kitronik.eDirection.Forward, 100);
-Kitronik.MotorOn(Kitronik.eMotors.Motor2, Kitronik.eDirection.Reverse, 100);
+    kitronik.motorOn(kitronik.Motors.Motor1, kitronik.MotorDirection.Forward, 100);
+    kitronik.motorOn(kitronik.Motors.Motor2, kitronik.MotorDirection.Reverse, 100);
 })
+// go forward
 input.onButtonPressed(Button.B, () => {
-Kitronik.MotorOn(Kitronik.eMotors.Motor1, Kitronik.eDirection.Reverse, 100);
-Kitronik.MotorOn(Kitronik.eMotors.Motor2, Kitronik.eDirection.Forward, 100);
+    kitronik.motorOn(kitronik.Motors.Motor1, kitronik.MotorDirection.Reverse, 100);
+    kitronik.motorOn(kitronik.Motors.Motor2, kitronik.MotorDirection.Forward, 100);
 })
-
+// stop
 input.onButtonPressed(Button.AB, () => {
-Kitronik.MotorOff(Kitronik.eMotors.Motor1);
-Kitronik.MotorOff(Kitronik.eMotors.Motor2);
+    kitronik.motorOff(kitronik.Motors.Motor1);
+    kitronik.motorOff(kitronik.Motors.Motor2);
 })
