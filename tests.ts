@@ -1,15 +1,12 @@
-// go round
+// go right 90 degrees
 input.onButtonPressed(Button.A, () => {
-    kitronik.motorOn(kitronik.Motors.Motor1, kitronik.MotorDirection.Forward, 100);
-    kitronik.motorOn(kitronik.Motors.Motor2, kitronik.MotorDirection.Reverse, 100);
+    kitronik.turnRight(90);
 })
-// go forward
+// go forward 10
 input.onButtonPressed(Button.B, () => {
-    kitronik.motorOn(kitronik.Motors.Motor1, kitronik.MotorDirection.Reverse, 100);
-    kitronik.motorOn(kitronik.Motors.Motor2, kitronik.MotorDirection.Forward, 100);
+    kitronik.driveForwards(10);
 })
 // stop
 input.onButtonPressed(Button.AB, () => {
-    kitronik.motorOff(kitronik.Motors.Motor1);
-    kitronik.motorOff(kitronik.Motors.Motor2);
+    kitronik.stop
 })
