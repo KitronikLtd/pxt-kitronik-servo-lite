@@ -1,7 +1,7 @@
 namespace kitronik {
 
 	/************************************************************************************************************************************************
-	* micro:bit Servo:Lite / :MOVE mini blocks 
+	* micro:bit Servo:Lite / :MOVE mini blocks
 	************************************************************************************************************************************************/
 
     /*some parameters used for controlling the turn and length of the ServoLite board controlled :MOVE mini */
@@ -14,7 +14,7 @@ namespace kitronik {
      */
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_forward
-    //% block="drive forward" 
+    //% block="drive forward"
     export function forward(): void {
         pins.servoWritePin(AnalogPin.P1, 0);
         pins.servoWritePin(AnalogPin.P2, 180);
@@ -25,7 +25,7 @@ namespace kitronik {
      */
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_backward
-    //% block="drive backward" 
+    //% block="drive backward"
     export function backward(): void {
         pins.servoWritePin(AnalogPin.P1, 180);
         pins.servoWritePin(AnalogPin.P2, 0);
@@ -36,7 +36,7 @@ namespace kitronik {
 	*/
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_left
-    //% block="turn left" 
+    //% block="turn left"
     export function left(): void {
         pins.servoWritePin(AnalogPin.P1, 0);
         pins.servoWritePin(AnalogPin.P2, 0);
@@ -47,14 +47,14 @@ namespace kitronik {
 	 */
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_right
-    //% block="turn right" 
+    //% block="turn right"
     export function right(): void {
         pins.servoWritePin(AnalogPin.P1, 180);
         pins.servoWritePin(AnalogPin.P2, 180);
     }
 
 	/**
-	 * Stop for 360 servos. 
+	 * Stop for 360 servos.
 	 * rather than write 90, which may not stop the servo moving if it is out of trim
 	 * this stops sending servo pulses, which has the same effect.
 	 * On a normal servo this will stop the servo where it is, rather than return it to neutral position.
@@ -62,19 +62,19 @@ namespace kitronik {
      */
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_stop
-    //% block="stop" 
+    //% block="stop"
     export function stop(): void {
         pins.analogWritePin(AnalogPin.P1, 0);
         pins.analogWritePin(AnalogPin.P2, 0);
     }
 
 	/**
-	 * Sends servos to 'neutral' position. 
+	 * Sends servos to 'neutral' position.
 	 * On a well trimmed 360 this is stationary, on a normal servo this is 90 degrees.
      */
     //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_neutral
-    //% block="goto neutral position" 
+    //% block="goto neutral position"
     export function neutral(): void {
         pins.servoWritePin(AnalogPin.P1, 90);
         pins.servoWritePin(AnalogPin.P2, 90);

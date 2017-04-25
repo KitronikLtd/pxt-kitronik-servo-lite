@@ -10,3 +10,4 @@ input.onButtonPressed(Button.B, () => {
 input.onButtonPressed(Button.AB, () => {
     kitronik.stop
 })
+
