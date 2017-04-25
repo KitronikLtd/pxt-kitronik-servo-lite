@@ -1,5 +1,5 @@
 {
-    "name": "pxt-kitronik",
+    "name": "pxt-kitronik-servo-lite",
     "version": "0.0.2",
     "description": "Blocks to simplify using Kitronik products in PXT",
     "license": "MIT",
@@ -9,11 +9,10 @@
     "files": [
         "README.md",
         "ns.ts",
-        "motors.ts",
         "servolite.ts"
     ],
     "testFiles": [
         "tests.ts"
     ],
-    "public": false
+    "public": true
 }
