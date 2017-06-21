@@ -1,6 +1,6 @@
 # Kitronik blocks for micro:bit
 
-Blocks that support [Kitronik kits and shields for the micro:bit](https://www.kitronik.co.uk/microbit.html)
+Blocks that support [Kitronik Servo:Lite board for the micro:bit](https://www.kitronik.co.uk/5623-servolite-board-for-move-mini.html)
 
 ## ServoLite
 
