@@ -165,6 +165,6 @@ namespace kitronik {
     //% blockId=kitronik_servolite_set_movement_speed_param 
     //% block="calibrate forward speed to %DistPerSec|mm per second"
     export function setDistancePerSecond(distPerSec: number): void {
-        numberOfDegreesPerSec = distPerSec
+        distancePerSec = distPerSec
     }
 }
