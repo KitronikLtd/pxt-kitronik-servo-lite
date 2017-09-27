@@ -6,7 +6,7 @@ namespace kitronik {
 
     /*some parameters used for controlling the turn and length of the ServoLite board controlled :MOVE mini */
     const microSecInASecond = 1000000
-    const distancePerSec = 100
+    let distancePerSec = 100
     let numberOfDegreesPerSec = 200
 
     /**
