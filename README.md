@@ -8,7 +8,7 @@ Blocks that support [Kitronik Servo:Lite board for the micro:bit](https://www.ki
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    Kitronik.turnRight(90);
+    kitronik.right(90);
 })
 ```
 
@@ -16,7 +16,7 @@ input.onButtonPressed(Button.A, () => {
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
-    kitronik.drive Forward(10);
+    kitronik.forward(10);
 })
 ```
 
