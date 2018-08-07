@@ -1,4 +1,8 @@
-namespace kitronik {
+/**
+ * Blocks for driving the Kitronik Servo:Lite Board
+ */
+//% weight=100 color=#00A654 icon="\uf1b6" block="Servo:Lite"
+namespace kitronik_servo_lite {
 
 	/************************************************************************************************************************************************
 	* micro:bit Servo:Lite / :MOVE mini blocks
@@ -12,7 +16,6 @@ namespace kitronik {
     /**
      * Drives forwards. Call stop to stop
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_forward
     //% block="drive forward"
     export function forward(): void {
@@ -23,7 +26,6 @@ namespace kitronik {
     /**
      * Drives backwards. Call stop to stop
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_backward
     //% block="drive backward"
     export function backward(): void {
@@ -34,7 +36,6 @@ namespace kitronik {
     /**
 	* Turns left. Call stop to stop
 	*/
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_left
     //% block="turn left"
     export function left(): void {
@@ -45,7 +46,6 @@ namespace kitronik {
 	/**
 	 * Turns right. Call ``stop`` to stop
 	 */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_right
     //% block="turn right"
     export function right(): void {
@@ -60,7 +60,6 @@ namespace kitronik {
 	 * On a normal servo this will stop the servo where it is, rather than return it to neutral position.
 	 * It will also not provide any holding force.
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_stop
     //% block="stop"
     export function stop(): void {
@@ -72,7 +71,6 @@ namespace kitronik {
 	 * Sends servos to 'neutral' position.
 	 * On a well trimmed 360 this is stationary, on a normal servo this is 90 degrees.
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_servos_neutral
     //% block="goto neutral position"
     export function neutral(): void {
@@ -84,7 +82,6 @@ namespace kitronik {
      * Drives forwards the requested distance and then stops
      * @param howFar distance to move
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_drive_forwards
     //% block="drive forwards %howFar|distance" 
     export function driveForwards(howFar: number): void {
@@ -98,7 +95,6 @@ namespace kitronik {
      * Drives backwards the requested distance and then stops
      * @param howFar distance to move
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_drive_backwards
     //% block="drive backwards %howFar|distance" 
     export function driveBackwards(howFar: number): void {
@@ -115,7 +111,6 @@ namespace kitronik {
      * Runs the servos at slower than the right function to reduce wheel slip
      * @param deg how far to turn, eg: 90
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_turn_right
     //% block="turn right %deg|degrees"
     export function turnRight(deg: number): void {
@@ -133,7 +128,6 @@ namespace kitronik {
     * Runs the servos at slower than the right function to reduce wheel slip
     * @param deg how far to turn, eg: 90
     */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_turn_left
     //% block="turn left %deg|degrees"
     export function turnLeft(deg: number): void {
@@ -149,7 +143,6 @@ namespace kitronik {
      * This allows tuning for the turn x degrees commands
      * @param degPerSec : How many degrees per second the mini does.
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_set_turn_speed_param
     //% block="calibrate turn speed to %DegPerSec|degrees per second" 
     export function setDegreesPerSecond(degPerSec: number): void {
@@ -161,7 +154,6 @@ namespace kitronik {
      * This allows tuning for the move x distance commands
      * @param DegPerSec : How many degrees per second the mini does.
      */
-    //% subcategory=ServoLite
     //% blockId=kitronik_servolite_set_movement_speed_param 
     //% block="calibrate forward speed to %DistPerSec|mm per second"
     export function setDistancePerSecond(distPerSec: number): void {
