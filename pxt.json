@@ -8,7 +8,8 @@
     },
     "files": [
         "README.md",
-        "servolite.ts"
+        "servolite.ts",
+        "_locales/fr/pxt-kitronik-servo-lite-strings.json"
     ],
     "testFiles": [
         "tests.ts"
