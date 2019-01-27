@@ -1,0 +1,14 @@
+{
+"kitronik_servolite_servos_forward|block": "avancer",
+"kitronik_servolite_servos_backward|block": "reculer",
+"kitronik_servolite_servos_left|block": "tourner à gauche",
+"kitronik_servolite_servos_right|block": "tourner à droite",
+"kitronik_servolite_servos_stop|block": "stop",
+"kitronik_servolite_servos_neutral|block": "retour en position initiale",
+"kitronik_servolite_drive_forwards|block": "avancer de %howFar|pas",
+"kitronik_servolite_drive_backwards|block": "reculer de %howFar|pas",
+"kitronik_servolite_turn_right|block": "tourner à droite de %deg|degrés",
+"kitronik_servolite_turn_left|block": "tourner à gauche de %deg|degrés",
+"kitronik_servolite_set_turn_speed_param|block": "régler la vitesse de rotation à %DegPerSec|degrés par seconde",
+"kitronik_servolite_set_movement_speed_param|block": "régler la vitesse avant à %DistPerSec|mm par seconde"
+    }
