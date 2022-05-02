@@ -4,7 +4,6 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-kitronik-servo-lite": "github:pelikhan/pxt-kitronik-servo-lite",
         "jacdac": "github:microsoft/pxt-jacdac#v0.10.19",
         "jacdac-led": "github:microsoft/pxt-jacdac/led#v0.10.19",
         "jacdac-led-server": "github:microsoft/pxt-jacdac/led-server#v0.10.19",
