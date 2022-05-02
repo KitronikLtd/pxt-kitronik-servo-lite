@@ -1,5 +1,6 @@
 {
     "name": "kitronik-servo-lite-jacdac",
+    "version": "1.0.6",
     "dependencies": {
         "core": "*",
         "radio": "*",
