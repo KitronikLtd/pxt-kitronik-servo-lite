@@ -4,10 +4,13 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-kitronik-servo-lite": "github:pelikhan/pxt-kitronik-servo-lite"
+        "pxt-kitronik-servo-lite": "github:pelikhan/pxt-kitronik-servo-lite",
+        "jacdac": "github:microsoft/pxt-jacdac#v0.10.19",
+        "jacdac-led": "github:microsoft/pxt-jacdac/led#v0.10.19",
+        "jacdac-led-server": "github:microsoft/pxt-jacdac/led-server#v0.10.19",
+        "jacdac-servo-server": "github:microsoft/pxt-jacdac/servo-server#v0.10.19"
     },
     "files": [
-        "main.blocks",
         "main.ts",
         "README.md"
     ],
@@ -21,5 +24,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
