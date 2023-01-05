@@ -1,17 +1,32 @@
-/**
- * Blocks for driving the Kitronik Servo:Lite Board
- */
+/* Blocks for driving the Kitronik Servo:Lite Board
+*/
 //% weight=100 color=#00A654 icon="\uf1b9" block="Servo:Lite"
 namespace kitronik_servo_lite {
-
-	/************************************************************************************************************************************************
-	* micro:bit Servo:Lite / :MOVE mini blocks
-	************************************************************************************************************************************************/
+    /************************************************************************************************************************************************
+    * micro:bit Servo:Lite / :MOVE mini blocks
+    ************************************************************************************************************************************************/
 
     /*some parameters used for controlling the turn and length of the ServoLite board controlled :MOVE mini */
     const microSecInASecond = 1000000
     let distancePerSec = 100
     let numberOfDegreesPerSec = 200
+    let biasToApply = 50 //in the middle is the place to start
+
+    /**
+     * Apply a bias to the wheels. 0 to 50 for left, 50 to 100 for right.
+     * @param bias eg: 50
+     */
+    //% blockId=kitronik_servolite_servos_bias
+    //% block="bias %biasDriving"
+    //% bias.min=0 bias.max=100
+    export function biasDriving(bias:number): void {
+        if (bias > 100) {
+            bias = 100;
+        } else if (bias < 0) {
+            bias = 0;
+        }
+        biasToApply = bias;
+    }
 
     /**
      * Drives forwards. Call stop to stop
@@ -19,8 +34,19 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_forward
     //% block="drive forward"
     export function forward(): void {
-        pins.servoWritePin(AnalogPin.P1, 0);
-        pins.servoWritePin(AnalogPin.P2, 180);
+        let P1Output = 0;
+        let P2Output = 180;
+        
+        if (biasToApply < 50) {
+            // Want to move 180 towards 90
+            P2Output -= 50 - biasToApply;
+        } else if (biasToApply > 50) {
+            // Want to move 0 towards 90
+            P1Output += biasToApply - 50;
+        }
+
+        pins.servoWritePin(AnalogPin.P1, P1Output);
+        pins.servoWritePin(AnalogPin.P2, P2Output);
     }
 
     /**
@@ -29,13 +55,24 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_servos_backward
     //% block="drive backward"
     export function backward(): void {
-        pins.servoWritePin(AnalogPin.P1, 180);
-        pins.servoWritePin(AnalogPin.P2, 0);
+        let P1Output = 180;
+        let P2Output = 0;
+        
+        if (biasToApply < 50) {
+            // Want to move 0 towards 90
+            P2Output += 50 - biasToApply;
+        } else if (biasToApply > 50) {
+            // Want to move 180 towards 90
+            P1Output -= biasToApply - 50;
+        }
+
+        pins.servoWritePin(AnalogPin.P1, P1Output);
+        pins.servoWritePin(AnalogPin.P2, P2Output);
     }
 
     /**
-	* Turns left. Call stop to stop
-	*/
+    * Turns left. Call stop to stop
+    */
     //% blockId=kitronik_servolite_servos_left
     //% block="turn left"
     export function left(): void {
@@ -43,9 +80,9 @@ namespace kitronik_servo_lite {
         pins.servoWritePin(AnalogPin.P2, 0);
     }
 
-	/**
-	 * Turns right. Call ``stop`` to stop
-	 */
+    /**
+     * Turns right. Call ``stop`` to stop
+     */
     //% blockId=kitronik_servolite_servos_right
     //% block="turn right"
     export function right(): void {
@@ -53,12 +90,12 @@ namespace kitronik_servo_lite {
         pins.servoWritePin(AnalogPin.P2, 180);
     }
 
-	/**
-	 * Stop for 360 servos.
-	 * rather than write 90, which may not stop the servo moving if it is out of trim
-	 * this stops sending servo pulses, which has the same effect.
-	 * On a normal servo this will stop the servo where it is, rather than return it to neutral position.
-	 * It will also not provide any holding force.
+    /**
+     * Stop for 360 servos.
+     * rather than write 90, which may not stop the servo moving if it is out of trim
+     * this stops sending servo pulses, which has the same effect.
+     * On a normal servo this will stop the servo where it is, rather than return it to neutral position.
+     * It will also not provide any holding force.
      */
     //% blockId=kitronik_servolite_servos_stop
     //% block="stop"
@@ -67,9 +104,9 @@ namespace kitronik_servo_lite {
         pins.analogWritePin(AnalogPin.P2, 0);
     }
 
-	/**
-	 * Sends servos to 'neutral' position.
-	 * On a well trimmed 360 this is stationary, on a normal servo this is 90 degrees.
+    /**
+     * Sends servos to 'neutral' position.
+     * On a well trimmed 360 this is stationary, on a normal servo this is 90 degrees.
      */
     //% blockId=kitronik_servolite_servos_neutral
     //% block="goto neutral position"
@@ -138,7 +175,7 @@ namespace kitronik_servo_lite {
         stop()
     }
 
-	/**
+    /**
      * Allows the setting of the :MOVE mini turn speed.
      * This allows tuning for the turn x degrees commands
      * @param degPerSec : How many degrees per second the mini does.
