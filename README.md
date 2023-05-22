@@ -36,8 +36,3 @@ MIT
 
 * for PXT/microbit
 (The metadata above is needed for package search.)
-
-
-```package
-pxt-kitronik-servo-lite=github:KitronikLtd/pxt-kitronik-servo-lite
-```
