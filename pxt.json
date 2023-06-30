@@ -1,6 +1,6 @@
 {
     "name": "pxt-kitronik-servo-lite",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Blocks to simplify using Kitronik Servo:Lite board in PXT",
     "license": "MIT",
     "dependencies": {

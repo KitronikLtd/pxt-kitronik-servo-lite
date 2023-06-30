@@ -1,13 +1,15 @@
-/* Blocks for driving the Kitronik Servo:Lite Board
-*/
+/**
+ * Blocks for driving the Kitronik Servo:Lite Board
+ */
 //% weight=100 color=#00A654 icon="\uf1b9" block="Servo:Lite"
 namespace kitronik_servo_lite {
-    /************************************************************************************************************************************************
-    * micro:bit Servo:Lite / :MOVE mini blocks
-    ************************************************************************************************************************************************/
+    /**
+     * **********************************************************************************************************************************************
+     * micro:bit Servo:Lite / :MOVE mini blocks
+     ************************************************************************************************************************************************/
 
-    /*some parameters used for controlling the turn and length of the ServoLite board controlled :MOVE mini */
-    const microSecInASecond = 1000000
+    /* Some parameters used for controlling the turn and length of the ServoLite board controlled :MOVE mini */
+    const milliSecInASecond = 1000
     let distancePerSec = 100
     let numberOfDegreesPerSec = 200
     let biasToApply = 50 //in the middle is the place to start
@@ -122,9 +124,9 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_drive_forwards
     //% block="drive forwards %howFar|distance" 
     export function driveForwards(howFar: number): void {
-        let timeToWait = (howFar * microSecInASecond) / distancePerSec; // calculation done this way round to avoid zero rounding
+        let timeToWait = (howFar * milliSecInASecond) / distancePerSec; // calculation done this way round to avoid zero rounding
         forward();
-        control.waitMicros(timeToWait);
+        basic.pause(timeToWait);
         stop();
     }
 
@@ -135,9 +137,9 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_drive_backwards
     //% block="drive backwards %howFar|distance" 
     export function driveBackwards(howFar: number): void {
-        let timeToWait = (howFar * microSecInASecond) / distancePerSec; // calculation done this way round to avoid zero rounding
+        let timeToWait = (howFar * milliSecInASecond) / distancePerSec; // calculation done this way round to avoid zero rounding
         backward();
-        control.waitMicros(timeToWait);
+        basic.pause(timeToWait);
         stop();
     }
 
@@ -151,10 +153,10 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_turn_right
     //% block="turn right %deg|degrees"
     export function turnRight(deg: number): void {
-        let timeToWait = (deg * microSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
+        let timeToWait = (deg * milliSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
         pins.servoWritePin(AnalogPin.P1, 130);
         pins.servoWritePin(AnalogPin.P2, 130);
-        control.waitMicros(timeToWait);
+        basic.pause(timeToWait);
         stop();
     }
 
@@ -168,10 +170,10 @@ namespace kitronik_servo_lite {
     //% blockId=kitronik_servolite_turn_left
     //% block="turn left %deg|degrees"
     export function turnLeft(deg: number): void {
-        let timeToWait = (deg * microSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
+        let timeToWait = (deg * milliSecInASecond) / numberOfDegreesPerSec;// calculation done this way round to avoid zero rounding
         pins.servoWritePin(AnalogPin.P1, 50);
         pins.servoWritePin(AnalogPin.P2, 50);
-        control.waitMicros(timeToWait);
+        basic.pause(timeToWait);
         stop()
     }
 
