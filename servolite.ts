@@ -178,23 +178,23 @@ namespace kitronik_servo_lite {
     }
 
     /**
-     * Allows the setting of the :MOVE mini turn speed.
+     * Allows the setting of the :MOVE mini turn amount.
      * This allows tuning for the turn x degrees commands
      * @param degPerSec : How many degrees per second the mini does.
      */
     //% blockId=kitronik_servolite_set_turn_speed_param
-    //% block="calibrate turn speed to %DegPerSec|degrees per second" 
+    //% block="calibrate turn amount to %degPerSec|degrees per second" 
     export function setDegreesPerSecond(degPerSec: number): void {
         numberOfDegreesPerSec = degPerSec
     }
 
     /**
-     * Allows the setting of the :MOVE mini forward / reverse speed.
+     * Allows the setting of the :MOVE mini forward / reverse distance.
      * This allows tuning for the move x distance commands
-     * @param DegPerSec : How many degrees per second the mini does.
+     * @param distPerSec : How many mm per second the mini does.
      */
     //% blockId=kitronik_servolite_set_movement_speed_param 
-    //% block="calibrate forward speed to %DistPerSec|mm per second"
+    //% block="calibrate drive amount to %distPerSec|mm per second"
     export function setDistancePerSecond(distPerSec: number): void {
         distancePerSec = distPerSec
     }
