@@ -1,0 +1,17 @@
+{
+  "kitronik_servo_lite.backward|block": "tolat",
+  "kitronik_servo_lite.biasDriving|block": "hangolás %biasDriving",
+  "kitronik_servo_lite.driveBackwards|block": "tolat %howFar|távolság",
+  "kitronik_servo_lite.driveForwards|block": "előre megy %howFar|távolság",
+  "kitronik_servo_lite.forward|block": "előre megy",
+  "kitronik_servo_lite.left|block": "balra fordul",
+  "kitronik_servo_lite.neutral|block": "semleges állás",
+  "kitronik_servo_lite.right|block": "jobbra fordul",
+  "kitronik_servo_lite.setDegreesPerSecond|block": "fordulás kalibrálása %degPerSec|fok/másodperc",
+  "kitronik_servo_lite.setDistancePerSecond|block": "haladás kalibrálása %distPerSec|mm/másodperc",
+  "kitronik_servo_lite.stop|block": "megáll",
+  "kitronik_servo_lite.turnLeft|block": "balra fordul %deg|fokot",
+  "kitronik_servo_lite.turnRight|block": "jobbra fordul %deg|fokot",
+  "kitronik_servo_lite|block": "Servo:Lite",
+  "{id:category}Kitronik_servo_lite": "Kitronik_servo_lite"
+}
