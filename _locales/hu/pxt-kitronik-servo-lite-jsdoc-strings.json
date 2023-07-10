@@ -1,0 +1,23 @@
+{
+  "kitronik_servo_lite": "Blokkok a Kitronik Servo:Lite kiegészítő készlethez",
+  "kitronik_servo_lite.backward": "Tolat. Meg kell hívni a ``megáll`` parancsot a megálláshoz",
+  "kitronik_servo_lite.biasDriving": "A kerekek közötti különbség kiegyensúlyozása. 0-tól 50-ig a bal oldalt, 50-től 100-ig a jobb oldalt lassítja.",
+  "kitronik_servo_lite.biasDriving|param|bias": "például: 50",
+  "kitronik_servo_lite.driveBackwards": "Tolat a kért távolságig majd megáll",
+  "kitronik_servo_lite.driveBackwards|param|howFar": "távolság",
+  "kitronik_servo_lite.driveForwards": "Előre megy a kért távolságig majd megáll",
+  "kitronik_servo_lite.driveForwards|param|howFar": "távolság",
+  "kitronik_servo_lite.forward": "Előre megy. Meg kell hívni a ``megáll`` parancsot a megálláshoz",
+  "kitronik_servo_lite.left": "Balra fordul. Meg kell hívni a ``megáll`` parancsot a megálláshoz",
+  "kitronik_servo_lite.neutral": "A szervókat semleges pozícióba állítja.\nEgy jól behangolt 360-ason ez az álló helyzetet jelenti, egy normál szervónál pedig a 90 fokot.",
+  "kitronik_servo_lite.right": "Jobbra fordul. Meg kell hívni a ``megáll`` parancsot a megálláshoz",
+  "kitronik_servo_lite.setDegreesPerSecond": "Beállítható a :MOVE mini fordulási sebessége.\nEnnek segítségével be lehet hangolni a fokonkénti fordulás parancsokat",
+  "kitronik_servo_lite.setDegreesPerSecond|param|degPerSec": ": Hány fokot fordul a mini másodpercenként.",
+  "kitronik_servo_lite.setDistancePerSecond": "Beállítható a :MOVE mini előre / hátra sebessége.\nEnnek segítségével lehet hangolni a megadott távolságig való mozgást",
+  "kitronik_servo_lite.setDistancePerSecond|param|distPerSec": ": Mennyi millimétert halad a mini másodpercenként.",
+  "kitronik_servo_lite.stop": "Megállás a 360-as szervók esetén\nA 90-es érték helyett, amely nem biztos, hogy megállítja a szervót a mozgásban,\nez nem küld több impulzust a szervónak, aminek ugyanaz lesz a hatása.\nNormál szervó motor esetén a motor az aktuális állapotban marad, és nem semleges állapotba állítja.\nEmellett nem erővel fogja megállítani a robotot.",
+  "kitronik_servo_lite.turnLeft": "Balra fordul a megadott fokot majd megáll\nSzükséges, hogy a fok/másodperc érték be legyen állítva a pontos forduláshoz,\nmivel a sima fordulás, várakozás, megállás módszert használja.\nA szervókat fél sebességgel működteti, hogy csökkentse a kerekek megcsúszását",
+  "kitronik_servo_lite.turnLeft|param|deg": "meddig forduljon, például: 90",
+  "kitronik_servo_lite.turnRight": "Jobbra fordul a megadott fokot majd megáll\nSzükséges, hogy a fok/másodperc érték be legyen állítva a pontos forduláshoz,\nmivel a sima fordulás, várakozás, megállás módszert használja.\nA szervókat fél sebességgel működteti, hogy csökkentse a kerekek megcsúszását",
+  "kitronik_servo_lite.turnRight|param|deg": "meddig forduljon, például: 90"
+}
