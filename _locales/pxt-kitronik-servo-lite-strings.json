@@ -1,0 +1,17 @@
+{
+  "kitronik_servo_lite.backward|block": "drive backward",
+  "kitronik_servo_lite.biasDriving|block": "bias %biasDriving",
+  "kitronik_servo_lite.driveBackwards|block": "drive backwards %howFar|distance",
+  "kitronik_servo_lite.driveForwards|block": "drive forwards %howFar|distance",
+  "kitronik_servo_lite.forward|block": "drive forward",
+  "kitronik_servo_lite.left|block": "turn left",
+  "kitronik_servo_lite.neutral|block": "goto neutral position",
+  "kitronik_servo_lite.right|block": "turn right",
+  "kitronik_servo_lite.setDegreesPerSecond|block": "calibrate turn amount to %degPerSec|degrees per second",
+  "kitronik_servo_lite.setDistancePerSecond|block": "calibrate drive amount to %distPerSec|mm per second",
+  "kitronik_servo_lite.stop|block": "stop",
+  "kitronik_servo_lite.turnLeft|block": "turn left %deg|degrees",
+  "kitronik_servo_lite.turnRight|block": "turn right %deg|degrees",
+  "kitronik_servo_lite|block": "Servo:Lite",
+  "{id:category}Kitronik_servo_lite": "Kitronik_servo_lite"
+}

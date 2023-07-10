@@ -1,0 +1,23 @@
+{
+  "kitronik_servo_lite": "Blocks for driving the Kitronik Servo:Lite Board",
+  "kitronik_servo_lite.backward": "Drives backwards. Call stop to stop",
+  "kitronik_servo_lite.biasDriving": "Apply a bias to the wheels. 0 to 50 for left, 50 to 100 for right.",
+  "kitronik_servo_lite.biasDriving|param|bias": "eg: 50",
+  "kitronik_servo_lite.driveBackwards": "Drives backwards the requested distance and then stops",
+  "kitronik_servo_lite.driveBackwards|param|howFar": "distance to move",
+  "kitronik_servo_lite.driveForwards": "Drives forwards the requested distance and then stops",
+  "kitronik_servo_lite.driveForwards|param|howFar": "distance to move",
+  "kitronik_servo_lite.forward": "Drives forwards. Call stop to stop",
+  "kitronik_servo_lite.left": "Turns left. Call stop to stop",
+  "kitronik_servo_lite.neutral": "Sends servos to 'neutral' position.\r\nOn a well trimmed 360 this is stationary, on a normal servo this is 90 degrees.",
+  "kitronik_servo_lite.right": "Turns right. Call ``stop`` to stop",
+  "kitronik_servo_lite.setDegreesPerSecond": "Allows the setting of the :MOVE mini turn amount.\r\nThis allows tuning for the turn x degrees commands",
+  "kitronik_servo_lite.setDegreesPerSecond|param|degPerSec": ": How many degrees per second the mini does.",
+  "kitronik_servo_lite.setDistancePerSecond": "Allows the setting of the :MOVE mini forward / reverse distance.\r\nThis allows tuning for the move x distance commands",
+  "kitronik_servo_lite.setDistancePerSecond|param|distPerSec": ": How many mm per second the mini does.",
+  "kitronik_servo_lite.stop": "Stop for 360 servos.\r\nrather than write 90, which may not stop the servo moving if it is out of trim\r\nthis stops sending servo pulses, which has the same effect.\r\nOn a normal servo this will stop the servo where it is, rather than return it to neutral position.\r\nIt will also not provide any holding force.",
+  "kitronik_servo_lite.turnLeft": "Turns left through the requested degrees and then stops\r\nneeds NumberOfDegreesPerSec tuned to make accurate, as it uses\r\na simple turn, wait, stop method.\r\nRuns the servos at slower than the right function to reduce wheel slip",
+  "kitronik_servo_lite.turnLeft|param|deg": "how far to turn, eg: 90",
+  "kitronik_servo_lite.turnRight": "Turns right through the requested degrees and then stops\r\nneeds NumberOfDegreesPerSec tuned to make accurate, as it uses\r\na simple turn, wait, stop method.\r\nRuns the servos at slower than the right function to reduce wheel slip",
+  "kitronik_servo_lite.turnRight|param|deg": "how far to turn, eg: 90"
+}
